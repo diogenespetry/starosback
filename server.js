@@ -27,7 +27,7 @@ server.get("/ping", (req, res) => {
 });
 
 // Servir arquivos estáticos do frontend
-server.use("/", express.static("data/frontend/"));
+server.use("/", express.static("frontend/"));
 
 const startServer = async () => {
   try {
