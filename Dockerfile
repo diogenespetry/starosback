@@ -27,9 +27,7 @@ RUN yarn install --frozen-lockfile && yarn cache clean
 RUN npm install -g knex
 
 # Criar diretórios e permissões
-RUN mkdir -p /var/www/dados/data/{img,arq,aud} && \
-    chmod -R 777 /var/www/dados && \
-    chown -R node:node /var/www/dados
+
 
 # Copiar código fonte
 COPY --chown=node:node . .
