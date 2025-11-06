@@ -12,7 +12,7 @@ RUN apt-get update && \
     nano \
     tzdata \
     bash \
-    curl \
+    curl git \
     procps && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     echo $TZ > /etc/timezone && \
