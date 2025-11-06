@@ -26,6 +26,9 @@ server.get("/ping", (req, res) => {
   res.send("pong");
 });
 
+// Servir arquivos estáticos do frontend
+server.use("/", express.static("data/frontend/"));
+
 const startServer = async () => {
   try {
     await knex.raw("SELECT 1+1 as result");
